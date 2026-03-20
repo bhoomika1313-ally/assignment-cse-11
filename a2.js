@@ -1,1 +1,1 @@
-function calculate() {
+function calculate() {}
