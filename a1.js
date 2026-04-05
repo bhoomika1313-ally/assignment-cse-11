@@ -3,7 +3,7 @@ function calculate(){
     let totalMarks = 0;
     let i;
     for(i = 0; i < n; i++){
-        let x = parseFloat(prompt("Enter the subject number " + (i+1)));
+        let x = parseFloat(prompt("Enter the marks for subject " + (i+1)));
         totalMarks += x; // can be use with i = 1 too
     }
     let average = totalMarks / n;

@@ -1,10 +1,17 @@
-.h1 {
-    color: lightblue;
+body {
     text-align: center;
 }
 
-.h3{
+button {
+    background-color: lightcoral;
+    color: white;
+    padding: 15px 32px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+#result {
     color: lightpink;
-    text-align: center;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }

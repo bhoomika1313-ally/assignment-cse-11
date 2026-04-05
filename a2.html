@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment 2</title>
+    <link rel = "stylesheet" href = "a2.css">
 </head>
 <body>
-    <div class = "container">
-        <h2> employee salary management system</h2>
-        <form action = "#">
-            <button onClick = "addEmployee()"> add employee </button>
-        </form>
-    </div>
+    <h1> employee salary management system </h1>
+    <form> 
+        <input type = "text" placeholder = "employee name" id = "name">
+        <input type = "number" placeholder = "employeeid" id = "id">
+        <input type = "number" placeholder = "salary" id = "salary">
+        <input type = "text" placeholder = "department" id = "dept">
+    </form>
+    <button onclick = "addemployee()"> add employee </button>
+    <button onclick = "displayall()"> display all employee </button>
+    <button onclick = "totalsalary()"> total salary </button>
+    <button onclick = "avgsalary()"> average salary </button>
+    <button onclick = "filtersalary()"> salary >50000</button>
+    <button onclick = "deptwise()"> count by department </button>
+
+    <script src = "a2.js"></script>
 </body>
 </html>
