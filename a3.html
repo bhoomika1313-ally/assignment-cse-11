@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assignment 3</title>
+    <link rel = "stylesheet" href = "a3.css">
 </head>
 <body>
-     <h1 > welcome to java script lab </h1>
-     <input type="text" id="newText">
-        <br><br>
+     <h1 id = "head"> welcome to java script lab </h1>
+     <div class = "container">
+        <div class = "box1">
+            <input type="text" placeholder = "enter new heading text" id = "intext">
+        </div>
+        <div class = "box2">
         <button id = "changetext">Change Text</button>
-        <button id = "changeBg">Change Background</button>
-        <button id = "changeFont">Change Font</button>
+        <button id = "changebg">Change Background</button>
+        <button id = "changefont">Change Font</button>
+        </div>
+        <div class = "box2">
         <button id = "hide"> hide and show paragraph </button>
         <button id = "reset"> Reset </button>
-        
-    
-    <script src = "a3.js"></script>
+        </div>
+     </div>
+     <p id = "para">
+        this is a sample paragraph 
+        javascript events can dynamically change content 
+     </p>
+        <script src = "a3.js"></script>
 </body>
 </html>
