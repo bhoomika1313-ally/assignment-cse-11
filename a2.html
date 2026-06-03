@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 2</title>
+    <link rel = "stylesheet" href = "a2.css">
+</head>
+<body>
+    <h1> employee salary management system </h1>
+    <div class = "container">
+    <form> 
+        <input type = "text" placeholder = "employee name" id = "name">
+        <input type = "number" placeholder = "employee id" id = "id">
+        <input type = "number" placeholder = "salary" id = "salary">
+        <input type = "text" placeholder = "department" id = "dept">
+    </form>
+    <button onclick = "addemployee()"> add employee </button>
+    <button onclick = "displayall()"> display all employee </button>
+    <button onclick = "totalsalary()"> total salary </button>
+    <button onclick = "avgsalary()"> average salary </button>
+    <button onclick = "filtersalary()"> salary >50000</button>
+    <button onclick = "deptwise()"> count by department </button>
+    </div>
+
+    <script src = "a2.js"></script>
+</body>
+</html>
