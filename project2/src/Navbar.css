@@ -1,0 +1,23 @@
+.navbar {
+  background: #131921;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  margin-right: 30px;
+}
+
+.search {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.cart {
+  margin-left: 20px;
+  font-size: 18px;
+}
