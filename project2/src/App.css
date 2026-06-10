@@ -66,6 +66,7 @@ body {
 .cart {
   font-size: 1.1rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 /* Subnav */
@@ -82,13 +83,21 @@ body {
 .subnav p {
   white-space: nowrap;
   cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.subnav p:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Hero */
 
 .hero {
   height: 500px;
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.15),
       rgba(234, 237, 237, 1)
@@ -114,6 +123,13 @@ body {
 .category {
   background: white;
   padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .category h2 {
@@ -136,6 +152,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+
+  align-items: stretch;
 }
 
 .card {
@@ -147,6 +165,7 @@ body {
 
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -160,7 +179,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 250px;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   margin: 15px 0;
 }
@@ -184,6 +203,52 @@ body {
   background: #f7ca00;
 }
 
+/* Cart Sidebar */
+
+.cartSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.cartSidebar h2 {
+  margin-bottom: 20px;
+}
+
+.cartItem {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cartItem p {
+  margin-bottom: 8px;
+}
+
+.cartItem button {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.closeCart {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #232f3e;
+  color: white;
+  cursor: pointer;
+}
+
 /* Footer */
 
 .topBtn {
@@ -202,61 +267,7 @@ body {
   padding: 40px;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .searchBox {
-    order: 3;
-    width: 100%;
-  }
-
-  .hero {
-    height: 300px;
-  }
-
-  .categoryRow {
-    margin-top: -100px;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-}
-
-.searchBox {
-  flex: 1;
-  display: flex;
-  min-width: 0;
-  width: 100%;
-}
-
-.products {
-  max-width: 1400px;
-  margin: 20px auto;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  align-items: stretch;
-}
-
-.card {
-  height: 100%;
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-}
-
-.card img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: contain;
-  margin: 15px 0;
-}
+/* Tablet */
 
 @media (max-width: 1024px) {
   .hero {
@@ -272,6 +283,8 @@ body {
   }
 }
 
+/* Mobile */
+
 @media (max-width: 768px) {
   .navbar {
     display: grid;
@@ -282,6 +295,7 @@ body {
 
   .searchBox {
     grid-column: 1 / -1;
+    width: 100%;
   }
 
   .location,
@@ -306,7 +320,13 @@ body {
   .card img {
     height: 160px;
   }
+
+  .cartSidebar {
+    width: 100%;
+  }
 }
+
+/* Small Phones */
 
 @media (max-width: 480px) {
   .products {
@@ -319,5 +339,9 @@ body {
 
   .hero {
     height: 180px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
   }
 }
